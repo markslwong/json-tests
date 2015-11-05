@@ -57,11 +57,15 @@ namespace JsonTests
             
             Console.Clear();
 
-            Thread.Sleep(2000);
-            
             Console.WriteLine("Running Serialize Tests: {0} iterations ", numIterations);
+            
+            Thread.Sleep(5000); 
             BinaryTest.SerializeTest(numIterations, numCpuCores, random1);
+            
+            Thread.Sleep(5000); 
             JsonTest.SerializeTest(numIterations, numCpuCores, random2);
+            
+            Thread.Sleep(5000); 
             BsonTest.SerializeTest(numIterations, numCpuCores, random3);
 
             Console.WriteLine();
@@ -72,7 +76,11 @@ namespace JsonTests
 
             Console.WriteLine();
             Console.WriteLine("Running Reflection Tests: {0} iterations ", numIterations);
+            
+            Thread.Sleep(5000); 
             NativeTest.PerformanceTest(random1, numIterations, numCpuCores);
+            
+            Thread.Sleep(5000); 
             ReflectionTest.PerformanceTest(random2, numIterations, numCpuCores);
             
             Console.ReadLine();
